@@ -5,3 +5,5 @@
 127.0.0.1	doubleclick.net
 127.0.0.1       google.com
 127.0.0.1       www.google.com
+0.0.0.0         https://google.com
+0.0.0.0         https://www.google.com
