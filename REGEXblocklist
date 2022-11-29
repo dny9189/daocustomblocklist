@@ -82,3 +82,5 @@
 # Other
 # (^|\.)myhomescreen\.tv$ # can produce false positives, rather block individual domains
 ^api\..*\.hismarttv\.com$
+#####Test REGEX filters ############
+^[0-9][^a-z]+\.((com)|(edu))$
