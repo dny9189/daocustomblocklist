@@ -1,3 +1,4 @@
+#REGEX - general #1 #
 ^ad([sxv]?[0-9]*|system)[_.-]([^.[:space:]]+\.){1,}|[_.-]ad([sxv]?[0-9]*|system)[_.-]
 ^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]
 ^(.+[_.-])?telemetry[_.-]
@@ -13,6 +14,7 @@
 ^pixels?[-.]
 ^stat(s|istics)?[0-9]*[_.-]
 (.*)\.g00\.(.*)
+#REGEX - general #2 #
 ^https?://([A-Za-z0-9.-]*\.)?clicks\.beap\.bc\.yahoo\.com/
 ^https?://([A-Za-z0-9.-]*\.)?secure\.footprint\.net/
 ^https?://([A-Za-z0-9.-]*\.)?match\.com/
@@ -43,3 +45,40 @@
 ^https?://([A-Za-z0-9.-]*\.)?info\.yahoo\.com/
 ^https?://([A-Za-z0-9.-]*\.)?ads\.yahoo\.com/
 ^https?://([A-Za-z0-9.-]*\.)?global\.ard\.yahoo\.com/
+#REGEX - misc#
+((^)|(.))metric.
+((^)|(.))telemetry.
+((^)|(.))analytic.
+((^)|(.))adchoice.
+((^)|(.))adsdk.
+((^)|(.))adserv.
+((^)|(.))tracking.
+^(.+[_.-])?eulerian\.net$
+^(.+[_.-])?dnsdelegation\.io$
+^(.+[_.-])?(facebook|fb(cdn|sbx)?|tfbnw)\.[^.]+$
+^(.+[_.-])?(twitter|twimg|cms-twdigitalassets)\.(co\.)?[^.]+$
+#REGEX Filters for Devices#
+# LG
+(^|\.)ibs\.lgappstv\.com
+(^|\.)lgsmartad\.com
+(^|\.)smartshare\.lgtvsdp\.com
+(^|\.)rdx2\.lgtvsdp\.com
+^[a-z]{11,15}$
+#
+# Samsung
+(^|\.)giraffic\.com$
+(^|\.)internetat\.tv$
+(^|\.)pavv\.co\.kr$
+# (^|\.)samsungcloudcdn\.com$ # prevents updates
+# (^|\.)samsungcloudsolution\.com$ # prevents internet connection
+(^|\.)samsungcloudsolution\.net$
+(^|\.)samsungelectronics\.com$
+# (^|\.)samsungotn\.net$ # prevents updates
+(^|\.)samsungrm\.net$
+#
+# Vizio
+(\.|^)tvinteractive\.tv$
+#
+# Other
+# (^|\.)myhomescreen\.tv$ # can produce false positives, rather block individual domains
+^api\..*\.hismarttv\.com$
